@@ -1,0 +1,25 @@
+a{
+    color: white;
+    text-align: center;
+
+
+}
+.container-fluid{
+    margin-left: 14px;
+    padding: 06px;
+}
+.navbar-nav{
+    margin-left: 27px;
+}
+.nav-item{
+    margin-left: 105px;
+}
+.d-flex{
+    margin-left: 100px;
+}
+img{
+    margin-top: -10px;
+    margin-left: -25px;
+    padding: 0px;  
+    border-radius: 6px;
+}
