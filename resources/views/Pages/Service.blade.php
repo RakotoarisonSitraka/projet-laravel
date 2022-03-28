@@ -4,7 +4,7 @@
     
 @endsection
 @section('contenu')
-<h1>service</h1>
+<h1>Page service</h1>
     
 @endsection
     
