@@ -26,3 +26,14 @@ img{
 .w-5{
     display: none;
 }
+.text{
+    display: none;
+}
+p{
+    display: none;
+    
+}
+.flex{
+    margin: 27px;
+    display: -webkit-flex;
+}
