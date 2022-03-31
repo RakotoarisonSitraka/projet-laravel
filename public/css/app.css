@@ -1,12 +1,11 @@
-a{
+/* a{
     color: white;
     text-align: center;
-
-
 }
 .container-fluid{
     margin-left: 14px;
-    padding: 06px;
+ padding: 06px;
+    padding: 10px;
 }
 .navbar-nav{
     margin-left: 27px;
@@ -28,12 +27,4 @@ img{
 }
 .text{
     display: none;
-}
-p{
-    display: none;
-    
-}
-.flex{
-    margin: 27px;
-    display: -webkit-flex;
-}
+} */

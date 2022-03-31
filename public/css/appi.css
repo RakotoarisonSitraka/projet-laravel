@@ -25,6 +25,17 @@ img{
 .w-5{
     display: none;
 }
-.text{
+.text-sm{/*manala an le text par defaut*/
     display: none;
+}
+/* .font-medium{
+    display: none;
+} */
+/* .flex{
+    display:-webkit-flex;
+    margin-left: 0px;
+} */
+.relative{
+    display: initial;
+    
 }

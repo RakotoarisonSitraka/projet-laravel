@@ -8,12 +8,11 @@
    @foreach ($Produits as $vokatra)
      <div class="well">
       <h1><a href="">{{$vokatra->Product_name }}</a></h1>
-     </div>
-     
+     </div>  
  @endforeach
- {{$Produits->links()}}
-
-    
+      
+         <CENter> {{$Produits->links()}}</CENter>
+            
 @endsection
     
    
