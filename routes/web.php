@@ -24,6 +24,11 @@ Route::get('/',[PagesController::class,'home']);
 Route::get('/Service',[PagesController::class,'Service'] );
 
 Route::get('/Apropos',[PagesController::class,'Apropos']);
+
+Route::get('/show/{id}',[PagesController::class,'Mampiseho']);
+
+
+
 /*
 Route::get('/apropos/{Anarana}/{fanampiny}/{Num}', function ($Anarana,$fanampiny,$Num) {
     return "<h1>Bonjour</h1> <I>votre nom est</I>:<h2>".$Anarana."</h2> <h1> Prénom </h1>:".$fanampiny." numéro ".$Num."";

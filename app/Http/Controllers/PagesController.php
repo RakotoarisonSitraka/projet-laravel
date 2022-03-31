@@ -25,5 +25,13 @@ class PagesController extends Controller
     public function Apropos(){
         return view('Pages.Apropos');
     }
+    public function Mampiseho($id){/*afficher an le données anaty table*/
+        $Produits= DB::table('Products')
+                      ->where('id',$id)
+                      ->first();
+
+            return view('Pages.show')->with('Produits', $Produits);          
+      
+    }
 
 }
