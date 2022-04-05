@@ -4,31 +4,33 @@
 @endsection
 
 @section('contenu')
-<form action="{{url('/saveproduct')}}" method="POST" class="form-horizontal">
+
+ <center>
+  <form action="{{url('/sauverproduit')}}" method="POST" class="container form-horizontal">
     {{ csrf_field() }}
     <div class="row mb-3">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Nom </label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3"  placeholder="Pomme...">
+        <input type="text" class="form-control" id="inputEmail3"  placeholder="Pomme..."  name="Nom_du_Produit">
       </div>
     </div>
     <div class="row mb-3">
       <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3"  placeholder="Délicieux...">
+        <textarea cols="30" rows="10" class=" container form-control"  placeholder="Délicieux..."  name="Description"></textarea>
       </div>
     </div>
-    <fieldset class="row mb-3">
+    <fieldset class="row mb-3-inline">
       <legend class="col-form-label col-sm-2 pt-0">Type</legend>
       <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio"  id="gridRadios1" value="option1" name="Type"checked>
           <label class="form-check-label" for="gridRadios1">
             Fruit
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+        <div class="form-check-inline">{{--inline mitsivalana --}}
+          <input class="form-check-input" type="radio"  id="gridRadios2" value="option2" name="Type">
           <label class="form-check-label" for="gridRadios2">
          Legume
           </label>
@@ -40,11 +42,13 @@
     <div class="row mb-3">
         <label for="inputPassword3" class="col-sm-2 col-form-label">Prix</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3"  placeholder="6000 Ar">
+          <input type="text" class="form-control mb-2" id="inputPassword3"  placeholder="6000 Ar" name="Prix">
         </div>
   
-    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <center><button type="submit" class="btn btn-success" id="Bout">Enregistrer</button></center>
   </form>
     
+ </center>
+
 @endsection
 

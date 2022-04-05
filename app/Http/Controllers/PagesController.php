@@ -12,7 +12,7 @@ use  App\Models\produits;
 class PagesController extends Controller
 {
     //
-   public function home(){
+    public function home(){
         return view('Pages.home');
     }
 
@@ -30,15 +30,30 @@ class PagesController extends Controller
     public function Apropos(){
         return view('Pages.Apropos');
     }
+
+
     public function Mampiseho($id){/*afficher an le données anaty table*/
         //  $produit= DB::table('produits') methode LQB(Laravel Query Builder)
         //                ->where('id',$id)
         //               ->first();
 
        //  find fonction specifique
-       $produit=produits::find($id);
+             $produit=produits::find($id);
 
              return view('Pages.show')->with('produit', $produit);          
       
     }
+
+
+    //Ajout
+    public function Ajout(){
+        return view('Pages.Ajout');
+    }
+
+    //sauvegarde
+    public function sauvegarder(){
+
+    }
+
+
 }
