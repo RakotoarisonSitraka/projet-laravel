@@ -27,6 +27,10 @@ Route::get('/Apropos',[PagesController::class,'Apropos']);
 
 Route::get('/show/{id}',[PagesController::class,'Mampiseho']);
 
+Route::get('/Ajouter',[PagesController::class,'Ajout']);
+
+Route::post('/sauverproduit',[PagesController::class,'sauvegarder']);
+
 
 
 /*
