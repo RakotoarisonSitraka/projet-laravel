@@ -51,8 +51,14 @@ class PagesController extends Controller
     }
 
     //sauvegarde
-    public function sauvegarder(){
-
+    public function sauvegarder(Request $request){
+        //  print("le nom du produit est <h1> " . $request->Anarana_produit."</h1>"); 
+        $produit= new Produits();
+        $produit->Nom_du_Produit=$request->Name_du_Produit;
+        $produit->Description=$request->Description_produit;
+        $produit->Type=$request->Type_produit;
+        $produit->Prix=$request->Prix_produit;
+        $produit->save();
     }
 
 
