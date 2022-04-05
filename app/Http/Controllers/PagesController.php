@@ -41,5 +41,4 @@ class PagesController extends Controller
              return view('Pages.show')->with('produit', $produit);          
       
     }
-
 }
