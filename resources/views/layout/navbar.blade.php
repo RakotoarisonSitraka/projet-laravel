@@ -21,7 +21,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{URL::TO('Apropos')}}">A propos</a>
           </li>
-       
+          <button class="btn btn-info" type="submit" id="bouton">Ajouter</button>
           
         </ul>
         <form class="d-flex">
