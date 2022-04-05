@@ -4,8 +4,7 @@ a{
 }
 .container-fluid{
     margin-left: 14px;
- padding: 06px;
-    padding: 10px;
+    padding: -09px;
 }
 .navbar-nav{
     margin-left: 27px;
@@ -17,9 +16,8 @@ a{
     margin-left: 100px;
 }
 img{
-    margin-top: -10px;
+    margin-top: -03px;
     margin-left: -25px;
-    padding: 0px;  
     border-radius: 6px;
 }
 .w-5{
