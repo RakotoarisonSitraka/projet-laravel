@@ -25,7 +25,7 @@
     <div class="row mb-3">
       <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
       <div class="col-sm-10">
-        <textarea cols="30" rows="10" class=" container form-control"  placeholder="Délicieux..."  name="Description" required></textarea>
+        <textarea cols="10" rows="06" class=" container form-control"  placeholder="Délicieux..."  name="Description" required></textarea>
       </div>
     </div>
     <fieldset class="row mb-3-inline">
