@@ -6,7 +6,7 @@
 @section('contenu')
 <center><h1>Page service</h1></center><br>
     @foreach ($produits as $produit)
-     <div class="well">
+     <div class=" alert-success container">
       <h1><a href="/show/{{$produit->id}}">{{$produit->Nom_du_Produit}}</a></h1>
      
                   {{-- page show dia ny id no apoitra am url --}}

@@ -14,7 +14,9 @@ class PagesController extends Controller
 {
     //
     public function home(){
-        return view('Pages.home');
+        $produit= produits::orderBy('Nom_Du_Produit','asc')->paginate(1);
+        return view('Pages.Service')->with('produits',$produit);
+        // return view('Pages.home');
     }
 
     public function Service(){
@@ -53,13 +55,27 @@ class PagesController extends Controller
 
     //sauvegarde
     public function sauvegarder(Request $request){
+
+        //1 er manière d'affichage
+
          // print("le nom du produit est <h1> " . $request->Nom_du_Produit."</h1>"); 
-         $produit= new Produits();
-          $produit->Nom_du_Produit=$request->Nom_du_Produit;
-         $produit->Description=$request->Description;
-         $produit->Type=$request->Type;
-         $produit->Prix=$request->Prix;
-         $produit->save();
+          $produit= new Produits();
+          $produit->Nom_du_Produit=$request->input('Nom_du_Produit');
+          $produit->Description=$request->input('Description');
+          $produit->Type=$request->input('Type');
+          $produit->Prix=$request->input('Prix');
+          $produit->save();
+
+        // 2 em manière
+        // $data= array();
+        // $data["Nom_du_Produit"]=$request->input('Nom_du_Produit');
+        // $data["Description"]=$request->input('Description');
+        // $data["Type"]=$request->input('Type');
+        // $data["Prix"]=$request->input('Prix');
+        // $data["created_at"]=$request-
+
+        //  DB::table('Produits')
+        //     ->insert($data);
          Session::put('message','le produit '.$request->Nom_du_Produit. ' a été bien inseré! ');
          return redirect('/Ajouter');
     }

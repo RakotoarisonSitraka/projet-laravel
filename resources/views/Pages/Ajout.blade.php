@@ -14,7 +14,8 @@
      
        
    @endif
-  <form action="{{url('/sauverproduit')}}" method="POST" class="container form-horizontal">
+   <form action="{{url('/sauverproduit')}}" method="POST" class="container form-horizontal">
+    
     {{ csrf_field() }}
     <div class="row mb-3">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Nom </label>
@@ -29,7 +30,7 @@
       </div>
     </div>
     <fieldset class="row mb-3-inline">
-      <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Catégorie</legend>
        <div class="col-sm-10">
         <div class="form-check-inline">
           <input class="form-check-input" type="radio"  id="gridRadios1" value="option1" name="Type"checked required>
@@ -51,7 +52,7 @@
         <label for="inputPassword3" class="col-sm-2 col-form-label">Prix</label>
         <div class="col-sm-10">
           <input type="text" class="form-control mb-2" id="inputPassword3"  placeholder="6000 " name="Prix" required>
-        </div>
+        </div><br><br><br><br><br>
   
     <center><button type="submit" class="btn btn-success" id="Bout">Enregistrer</button></center>
   </form>
