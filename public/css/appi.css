@@ -4,10 +4,11 @@ a{
 }
 .container-fluid{
     margin-left: 14px;
-    padding: -09px;
+    padding: -07px;
 }
 .navbar-nav{
     margin-left: 27px;
+    margin-top: 3px;
 }
 .nav-item{
     margin-left: 105px;

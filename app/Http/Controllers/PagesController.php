@@ -61,9 +61,6 @@ class PagesController extends Controller
          $produit->Prix=$request->Prix;
          $produit->save();
          Session::put('message','le produit '.$request->Nom_du_Produit. ' a été bien inseré! ');
-
          return redirect('/Ajouter');
     }
-
-
 }
