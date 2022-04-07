@@ -53,7 +53,7 @@ class PagesController extends Controller
         return view('Pages.Ajout');
     }
 
-    public function modification(){
+    public function modification($id){
         
     }
 

@@ -11,7 +11,6 @@
             {{Session::get('message')}}
             {{Session::put('message', null)}}
       </div>
-     
        
    @endif
    <form action="{{url('/sauverproduit')}}" method="POST" class="container form-horizontal">
