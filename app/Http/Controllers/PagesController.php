@@ -54,7 +54,7 @@ class PagesController extends Controller
     }
 
     public function modification(){
-        print('modifi');
+        
     }
 
     //sauvegarde
