@@ -53,6 +53,10 @@ class PagesController extends Controller
         return view('Pages.Ajout');
     }
 
+    public function modification(){
+        print('modifi');
+    }
+
     //sauvegarde
     public function sauvegarder(Request $request){
 

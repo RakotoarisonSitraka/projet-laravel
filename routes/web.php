@@ -31,7 +31,7 @@ Route::get('/Ajouter',[PagesController::class,'Ajout']);
 
 Route::post('/sauverproduit',[PagesController::class,'sauvegarder']);
 
-
+Route::get('/modifier',[PagesController::class,'modification']);
 
 /*
 Route::get('/apropos/{Anarana}/{fanampiny}/{Num}', function ($Anarana,$fanampiny,$Num) {
