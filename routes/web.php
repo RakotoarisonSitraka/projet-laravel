@@ -31,7 +31,9 @@ Route::get('/Ajouter',[PagesController::class,'Ajout']);
 
 Route::post('/sauverproduit',[PagesController::class,'sauvegarder']);
 
-Route::get('/modifier/{id}',[PagesController::class,'modification']);
+Route::get('/ModifierProduit/{id}',[PagesController::class,'modification']);//le bouton modif
+
+Route::post('/SaveDeModif',[PagesController::class,'SauvegardeDeModif']);//mise a jour action mits manova anle izy ts 1,1
 
 /*
 Route::get('/apropos/{Anarana}/{fanampiny}/{Num}', function ($Anarana,$fanampiny,$Num) {
