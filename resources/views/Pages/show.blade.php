@@ -5,7 +5,7 @@
 @endsection
 @section('contenu')
 <center> 
-       <h1>Le Détail du produit</h1>
+       <h1>Le Détail du produit avec prix</h1>
        <h2>Prix :{{$produit->Prix}} Ar</h2>
        <h2>Description :{{$produit->Description}}</h2>
        <h2>Ajouté le :{{$produit->created_at}}</h2><br><br>
