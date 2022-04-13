@@ -35,6 +35,8 @@ Route::get('/ModifierProduit/{id}',[PagesController::class,'modification']);//le
 
 Route::post('/SaveDeModif',[PagesController::class,'SauvegardeDeModif']);//mise a jour action mits manova anle izy ts 1,1
 
+Route::get('/Supprimer/{id}',[PagesController::class,'Suppression']);
+
 /*
 Route::get('/apropos/{Anarana}/{fanampiny}/{Num}', function ($Anarana,$fanampiny,$Num) {
     return "<h1>Bonjour</h1> <I>votre nom est</I>:<h2>".$Anarana."</h2> <h1> Prénom </h1>:".$fanampiny." numéro ".$Num."";
