@@ -33,7 +33,7 @@ Route::post('/sauverproduit',[PagesController::class,'sauvegarder']);
 
 Route::get('/ModifierProduit/{id}',[PagesController::class,'modification']);//le bouton modif
 
-Route::post('/SaveDeModif',[PagesController::class,'SauvegardeDeModif']);//mise a jour action mits manova anle izy ts 1,1
+Route::post('/SaveDeModif/{id}',[PagesController::class,'SauvegardeDeModif']);//mise a jour action mits manova anle izy ts 1,1
 
 Route::get('/Supprimer/{id}',[PagesController::class,'Suppression']);
 

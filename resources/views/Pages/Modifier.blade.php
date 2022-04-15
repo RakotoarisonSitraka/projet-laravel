@@ -13,12 +13,10 @@
       </div>
        
    @endif
-   <form action="{{url('/SaveDeModif')}}" method="POST" class="container form-horizontal">
-    
+   <form action="{{url('/SaveDeModif/'.$produit->id)}}" method="POST" class="container form-horizontal">
     {{ csrf_field() }}
     <div class="col-sm-10">
        <input type="hidden" value="{{$produit->id}}" class="form-control" id="inputEmail3">
-      
     </div>
     <div class="row mb-3">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Nom </label>

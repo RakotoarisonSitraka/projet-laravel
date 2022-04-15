@@ -14,9 +14,9 @@ class PagesController extends Controller
 {
     //
             public function home(){
-                    $produit= produits::orderBy('Nom_Du_Produit','asc')->paginate(1);
-                    return view('Pages.Service')->with('produits',$produit);
-                    // return view('Pages.home');
+                    // $produit= produits::orderBy('Nom_Du_Produit','asc')->paginate(1);
+                    // return view('Pages.Service')->with('produits',$produit);
+                     return view('Pages.home');
             }
 
 
@@ -51,42 +51,26 @@ class PagesController extends Controller
                  //  find fonction specifique       
             }
             
-
-
     //Ajout
             public function Ajout(){
             return view('Pages.Ajout');
 
             }
-
-
-
             public function modification($id){
                 //affichage nle données anaty formulaire
                 $produit=produits::find($id);
                 return view('Pages.Modifier')->with('produit',$produit);
             }
 
-            public function SauvegardeDeModif(Request $request){//action mits mitovy am save tsotra ihany (mise ajour)
-                 $data= array();
-                 $data["Nom_du_Produit"]=$request->input('Nom_du_Produit');
-                 $data["Description"]=$request->input('Description');
-                 $data["Type"]=$request->input('Type');
-                 $data["Prix"]=$request->input('Prix');
-                 DB::table('Produits')
-                    ->where('id',$request->input('id'))
-                     ->update($data);
-                 return redirect('/Service')->with('message','' .$request->input('Nom_du_Produit'). ' a été bien modifié! ');  
-         
-                //  $produit= produits::find($request->input('id'));//refa anao mise a jour d apiana anio
-                //  $produit->Nom_du_Produit=$request->input('Nom_du_Produit');
-                //  $produit->Description=$request->input('Description');
-                //  $produit->Type=$request->input('Type');
-                //  $produit->Prix=$request->input('Prix'); 
-                //  $produit->update();
-                //  return redirect('/Service')->with('message', ' a été bien modifié! ');  
+            public function SauvegardeDeModif($id, Request $request){//action mits mitovy am save tsotra ihany (mise ajour)
+                 $data=produits::find($id);
+                 $data->Nom_du_Produit=$request->input('Nom_du_Produit');
+                 $data->Description=$request->input('Description');
+                 $data->Prix=$request->input('Prix');
+                 $data->update();
+                return redirect('/Service')->with('message', ' a été bien modifié! ');  
        
-              }
+            }
                 //sauvegarde
             public function sauvegarder(Request $request){
 
@@ -95,10 +79,9 @@ class PagesController extends Controller
                 $produit= new Produits();//raha vao apiditra d manao allocation mémoire dynamique
                 $produit->Nom_du_Produit=$request->input('Nom_du_Produit');
                 $produit->Description=$request->input('Description');
-                $produit->Type=$request->input('Type');
                 $produit->Prix=$request->input('Prix');
                 $produit->save();
-                return redirect('/Ajouter')->with('message',' produit '.$request->Nom_du_Produit. ' a été bien inseré! ');
+                return redirect('/Ajouter')->with('message',' le produit '.$request->Nom_du_Produit. ' a été bien inseré! ');
 
                 // 2 em manière
                 // $data= array();

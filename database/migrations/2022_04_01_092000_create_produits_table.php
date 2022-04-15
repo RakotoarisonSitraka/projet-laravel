@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Schema;//schema ilaina anaovana update
 
 class CreateProduitsTable extends Migration
 {
@@ -18,7 +18,6 @@ class CreateProduitsTable extends Migration
             $table->string("Nom_du_Produit");
             $table->integer("Prix");
             $table->string("Description");
-            $table->string("Type");            
             $table->timestamps();
         });
     }
@@ -31,5 +30,7 @@ class CreateProduitsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('produits');
+        
+
     }
 }
