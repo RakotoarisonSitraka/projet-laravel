@@ -68,7 +68,7 @@ class PagesController extends Controller
                  $data->Description=$request->input('Description');
                  $data->Prix=$request->input('Prix');
                  $data->update();
-                return redirect('/Service')->with('message', ' a été bien modifié! ');  
+                return redirect('/Service')->with('message', ' produit bien modifié! ');  
        
             }
                 //sauvegarde
@@ -81,7 +81,7 @@ class PagesController extends Controller
                 $produit->Description=$request->input('Description');
                 $produit->Prix=$request->input('Prix');
                 $produit->save();
-                return redirect('/Ajouter')->with('message',' le produit '.$request->Nom_du_Produit. ' a été bien inseré! ');
+                return redirect('/Ajouter')->with('message',''.$request->Nom_du_Produit. ' produit bien inseré! ');
 
                 // 2 em manière
                 // $data= array();

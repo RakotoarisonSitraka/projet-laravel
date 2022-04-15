@@ -18,6 +18,7 @@ class CreateProduitsTable extends Migration
             $table->string("Nom_du_Produit");
             $table->integer("Prix");
             $table->string("Description");
+            $table->string('Type');
             $table->timestamps();
         });
     }
@@ -30,6 +31,11 @@ class CreateProduitsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('produits');
+        Schema::create('produits', function (Blueprint $table){
+            $table->dropColumn('Type');
+
+        });
+       
         
 
     }
